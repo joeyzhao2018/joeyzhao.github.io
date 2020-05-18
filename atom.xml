@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-18T01:53:19.704Z</updated>
+  <updated>2020-05-18T02:12:34.750Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,75 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>migration</title>
+    <link href="http://yoursite.com/2020/05/17/migration/"/>
+    <id>http://yoursite.com/2020/05/17/migration/</id>
+    <published>2020-05-18T01:59:44.000Z</published>
+    <updated>2020-05-18T02:12:34.750Z</updated>
+    
+    <content type="html"><![CDATA[<p>I’m migrating my posts from my old site hosted in heroku.<br>Hexo is really a cool tool. And I can host everything statically in github. I knew this was doable but never got a chance. It’s actually preety simple and I highly recommend.</p><h3 id="Github"><a href="#Github" class="headerlink" title="Github."></a>Github.</h3><p>Create a github repo and name it <username>.github.io.  Username has to be your github username.<br>Also you want to setup SSH in github.</p><h3 id="NodeJS"><a href="#NodeJS" class="headerlink" title="NodeJS."></a>NodeJS.</h3><p>install Nodejs so that you can use npm</p><h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo."></a>Hexo.</h3><p>install command</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>create project</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init &#123;project name&#125;</span><br></pre></td></tr></table></figure><p>compile your files into HTML:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure><p>try see it locally:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo serve</span><br></pre></td></tr></table></figure><p>deploy to github</p><p>first need to update the <strong>_config.yml</strong></p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&#123;git</span> <span class="string">repo</span> <span class="string">ssh</span> <span class="string">address&#125;</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure><p>then git plugin for hexo </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>now finally</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;I’m migrating my posts from my old site hosted in heroku.&lt;br&gt;Hexo is really a cool tool. And I can host everything statically in github. 
+      
+    
+    </summary>
+    
+    
+      <category term="blog" scheme="http://yoursite.com/categories/blog/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>wicked-processes</title>
+    <link href="http://yoursite.com/2018/05/08/wicked-processes/"/>
+    <id>http://yoursite.com/2018/05/08/wicked-processes/</id>
+    <published>2018-05-08T19:56:24.000Z</published>
+    <updated>2020-05-18T02:17:40.301Z</updated>
+    
+    <content type="html"><![CDATA[<h5>Example 1</h5><pre><code>from multiprocessing import Manager, Process<p>def timeout_query_by_func_name(params,settings,function_name):<br>    m=Manager()<br>    ns=m.Namespace()<br>    ns.my_df=None<br>    p= Process(target=function_name, args=(params,settings,ns))<br>    p.start()<br>    if ‘timeout’ in settings.keys():<br>        timeout=int(settings[‘timeout’])<br>    else:<br>        timeout=600<br>    p.join(timeout)<br>    if p.is_alive():<br>        p.terminate()<br>        p.join()<br>        raise Exception(‘Time out when calling ‘+function_name.<strong>name</strong>)<br>    return ns.my_df<br>    </code></pre></p><h5>Example 2</h5><pre><code>def workon_finishing():    ps=[]    for product, run_id in product_runs.iteritems():        p=Process(target=run_id_status_monitor, args=(product, run_id))        p.start()        ps.append(p)<pre><code>print(&quot;Start monitoring..... this can take up to a few hours&quot;)for p in ps:    p.join()print(&quot;Stopped monitoring. This run is closed.&quot;)</code></pre></code></pre><h5>Mind the COMMA</h5><p>If you see something like...</p><pre><code>TypeError: 'somekindof' object is not iterable</code></pre><p> just change the <code>args=(something)</code> to <code>args=(something,)</code></p><h5>About 'shared' objects, below trials are actually not recommended, especially for Process. It adds quite a lot overhead.Thread are fine with that <strong>dfs</strong>. Idk why but using list references are very addictive in Python. </h5><pre><code>from multiprocessing import Process, Managerimport pandas as pdimport threading<p>def f1(name_space):<br>    name_space.df=pd.DataFrame({‘a’:[1,2],’b’:[3,4]})</p><p>def f2(name_space):<br>    name_space.df=pd.DataFrame({‘a’:[1,4],’b’:[2,3]})</p><p>def f3(items,i):<br>    items[i]=pd.DataFrame({‘c’:[2,5]})</p><p>if <strong>name</strong>==”<strong>main</strong>“:<br>    m=Manager()<br>    ns=m.Namespace()<br>    ns_1=m.Namespace()<br>    ns_2=m.Namespace()<br>    ns_3=m.Namespace()</p><pre><code>ns_1.df=Nonens_2.df=Nonens_3.df=Noneps=[]p1= Process(target=f1, args=(ns_1,))p1.start()p2= Process(target=f2, args=(ns_2,))p2.start()p3= Process(target=f1, args=(ns_3,))p3.start()p4= Process(target=f2, args=(ns_3,))p4.start()dfs=[None]*9p3 = Process(target=f3, args=(dfs,1,))p3.start()t1=threading.Thread(target=f3, args=(dfs,2,))t1.start()ts=[]for i in [4,6,7]:    t=threading.Thread(target=f3,args=(dfs,i,))    t.start()    ts.append(t)p1.join()p2.join()p3.join()p4.join()t1.join()for t in ts:    t.join()print(ns_1.df)print(ns_2.df)print(ns_3.df)print(dfs[1])print(dfs[2])print(dfs[4])print(dfs[6])print(dfs[7])&lt;/code&gt;&lt;/pre&gt;</code></pre><h5>the outputs are</h5><pre><code>    a  b0  1  31  2  4   a  b0  1  21  4  3   a  b0  1  21  4  3None   c0  21  5   c0  21  5   c0  21  5   c0  21  5</code></pre><h5>But, since join(timeout) only works for Process and with the nice terminate() function, please use Manager in case you need TIMEOUT. That's the whole point.</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> multiprocessing.managers <span class="keyword">import</span> Man <span class="function"><span class="keyword">def</span> <span class="title">timeout_query_by_func_name</span><span class="params">(params,settings,function_name)</span>:</span> m=Manager() ns=m.Namespace() ns.my_df=<span class="literal">None</span> p= Process(target=function_name, args=(params,settings,ns)) p.start() <span class="keyword">if</span> <span class="string">'timeout'</span> <span class="keyword">in</span> settings.keys(): timeout=int(settings[<span class="string">'timeout'</span>]) <span class="keyword">else</span>: timeout=<span class="number">600</span> p.join(timeout) <span class="keyword">if</span> p.is_alive(): p.terminate() p.join() <span class="keyword">raise</span> Exception(<span class="string">'Time out when calling '</span>+function_name.__name__) <span class="keyword">return</span> ns.my_df</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h5&gt;
+Example 1
+&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;
+from multiprocessing import Manager, Process
+
+&lt;p&gt;def timeout_query_by_func_name(params,settings,function_na
+      
+    
+    </summary>
+    
+    
+      <category term="from-old-blog" scheme="http://yoursite.com/categories/from-old-blog/"/>
+    
+    
+      <category term="parallelism" scheme="http://yoursite.com/tags/parallelism/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="concurrency" scheme="http://yoursite.com/tags/concurrency/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Heroku Free Tier Deployment</title>
     <link href="http://yoursite.com/2018/05/01/heroku-free-tier-deployment/"/>
     <id>http://yoursite.com/2018/05/01/heroku-free-tier-deployment/</id>
     <published>2018-05-01T06:31:29.000Z</published>
-    <updated>2020-05-18T01:53:19.704Z</updated>
+    <updated>2020-05-18T02:18:03.746Z</updated>
     
     <content type="html"><![CDATA[<p>see logs:<br>heroku logs –tail<br>ctrl c to quit</p><p><strong>heroku create</strong></p><p>need pipenv<br>pipenv –three<br>pipenv install (inside the app directory)<br>pipenv shell</p><p>Deploy:<br>git add .<br>git commit -m “Demo”<br>git push heroku master<br>heroku open</p><p>heroku domains:add <a href="http://www.yourwebsite.com" target="_blank" rel="noopener">www.yourwebsite.com</a></p><p>if changed name<br><a href="https://stackoverflow.com/questions/7615807/renamed-heroku-app-from-website-now-its-not-found" target="_blank" rel="noopener">https://stackoverflow.com/questions/7615807/renamed-heroku-app-from-website-now-its-not-found</a><br>git remote rm heroku<br>git remote add heroku <a href="mailto:git@heroku.com">git@heroku.com</a>:yourappname.git<br>and…<br>1). open a terminal<br>2). Go to your_app_directory/.git/config<br>3). Once you open the config file then edit as follows:<br>Change<br>url = <a href="mailto:git@heroku.com">git@heroku.com</a>:old_app_name.git<br>to<br>url = <a href="mailto:git@heroku.com">git@heroku.com</a>:new_app_name.git</p><p>in the manage.py<br>change app.settings</p><p>Now, database<br>heroku addons </p><p>heroku config (to see the database_url)<br>DATABASE_URL:         postgres://mememe:<a href="mailto:nonono@something.amazonaws.com">nonono@something.amazonaws.com</a>:5432/dbdbdb</p><p>then change in the django settings</p><p> DATABASES = {<br>    ‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.postgresql_psycopg2’,<br>        ‘NAME’: ‘dbdbdb’,<br>        ‘USER’: ‘mememe’,<br>        ‘PASSWORD’: ‘nonono’,<br>        ‘HOST’: ‘something.amazonaws.com’,<br>        ‘PORT’: ‘6543’,<br>    }<br>    # ‘default’: {<br>    #     ‘ENGINE’: ‘django.db.backends.sqlite3’,<br>    #     ‘NAME’: os.path.join(BASE_DIR, ‘db.sqlite3’),<br>    # }<br>}</p><p>then do ‘python manage.py migrate’<br>this create the tables</p><p>export PATH=/Applications/Postgres.app/Contents/Versions/10/bin/:$PATH<br>THEN<br>heroku pg:psql</p><p><a href="https://gist.github.com/sirodoht/f598d14e9644e2d3909629a41e3522ad" target="_blank" rel="noopener">https://gist.github.com/sirodoht/f598d14e9644e2d3909629a41e3522ad</a></p>]]></content>
     
@@ -38,6 +102,8 @@
     
     
       <category term="cloud" scheme="http://yoursite.com/categories/cloud/"/>
+    
+      <category term="from-old-blog" scheme="http://yoursite.com/categories/cloud/from-old-blog/"/>
     
     
       <category term="heroku" scheme="http://yoursite.com/tags/heroku/"/>
