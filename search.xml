@@ -29,7 +29,8 @@
   <entry>
     <title>migration</title>
     <url>/2020/05/17/migration/</url>
-    <content><![CDATA[<p>I’m migrating my posts from my old site hosted in heroku.<br>Hexo is really a cool tool. And I can host everything statically in github. I knew this was doable but never got a chance. It’s actually preety simple and I highly recommend.</p>
+    <content><![CDATA[<p>I’m migrating my posts from my old site hosted in heroku.<br>Hexo is really a cool tool. And I can host everything statically in github. I knew this was doable but never got a chance to do it. Finally started migrating over this weekend (still working on it).<br>But it is actually pretty simple and I highly recommend using hexo for personal blogs.<br>Some tips setting it up. </p>
+<p>More stuff coming.</p>
 <h3 id="Github"><a href="#Github" class="headerlink" title="Github."></a>Github.</h3><p>Create a github repo and name it <username>.github.io.  Username has to be your github username.<br>Also you want to setup SSH in github.</p>
 <h3 id="NodeJS"><a href="#NodeJS" class="headerlink" title="NodeJS."></a>NodeJS.</h3><p>install Nodejs so that you can use npm</p>
 <h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo."></a>Hexo.</h3><p>install command</p>
