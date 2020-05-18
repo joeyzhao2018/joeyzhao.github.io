@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-17T00:44:09.028Z</updated>
+  <updated>2020-05-18T01:53:19.704Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,24 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2020/05/16/hello-world/"/>
-    <id>http://yoursite.com/2020/05/16/hello-world/</id>
-    <published>2020-05-17T00:44:09.028Z</published>
-    <updated>2020-05-17T00:44:09.028Z</updated>
+    <title>Heroku Free Tier Deployment</title>
+    <link href="http://yoursite.com/2018/05/01/heroku-free-tier-deployment/"/>
+    <id>http://yoursite.com/2018/05/01/heroku-free-tier-deployment/</id>
+    <published>2018-05-01T06:31:29.000Z</published>
+    <updated>2020-05-18T01:53:19.704Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>see logs:<br>heroku logs –tail<br>ctrl c to quit</p><p><strong>heroku create</strong></p><p>need pipenv<br>pipenv –three<br>pipenv install (inside the app directory)<br>pipenv shell</p><p>Deploy:<br>git add .<br>git commit -m “Demo”<br>git push heroku master<br>heroku open</p><p>heroku domains:add <a href="http://www.yourwebsite.com" target="_blank" rel="noopener">www.yourwebsite.com</a></p><p>if changed name<br><a href="https://stackoverflow.com/questions/7615807/renamed-heroku-app-from-website-now-its-not-found" target="_blank" rel="noopener">https://stackoverflow.com/questions/7615807/renamed-heroku-app-from-website-now-its-not-found</a><br>git remote rm heroku<br>git remote add heroku <a href="mailto:git@heroku.com">git@heroku.com</a>:yourappname.git<br>and…<br>1). open a terminal<br>2). Go to your_app_directory/.git/config<br>3). Once you open the config file then edit as follows:<br>Change<br>url = <a href="mailto:git@heroku.com">git@heroku.com</a>:old_app_name.git<br>to<br>url = <a href="mailto:git@heroku.com">git@heroku.com</a>:new_app_name.git</p><p>in the manage.py<br>change app.settings</p><p>Now, database<br>heroku addons </p><p>heroku config (to see the database_url)<br>DATABASE_URL:         postgres://mememe:<a href="mailto:nonono@something.amazonaws.com">nonono@something.amazonaws.com</a>:5432/dbdbdb</p><p>then change in the django settings</p><p> DATABASES = {<br>    ‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.postgresql_psycopg2’,<br>        ‘NAME’: ‘dbdbdb’,<br>        ‘USER’: ‘mememe’,<br>        ‘PASSWORD’: ‘nonono’,<br>        ‘HOST’: ‘something.amazonaws.com’,<br>        ‘PORT’: ‘6543’,<br>    }<br>    # ‘default’: {<br>    #     ‘ENGINE’: ‘django.db.backends.sqlite3’,<br>    #     ‘NAME’: os.path.join(BASE_DIR, ‘db.sqlite3’),<br>    # }<br>}</p><p>then do ‘python manage.py migrate’<br>this create the tables</p><p>export PATH=/Applications/Postgres.app/Contents/Versions/10/bin/:$PATH<br>THEN<br>heroku pg:psql</p><p><a href="https://gist.github.com/sirodoht/f598d14e9644e2d3909629a41e3522ad" target="_blank" rel="noopener">https://gist.github.com/sirodoht/f598d14e9644e2d3909629a41e3522ad</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        &lt;p&gt;see logs:&lt;br&gt;heroku logs –tail&lt;br&gt;ctrl c to quit&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;heroku create&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;need pipenv&lt;br&gt;pipenv –three&lt;br&gt;pipenv inst
       
     
     </summary>
     
     
+      <category term="cloud" scheme="http://yoursite.com/categories/cloud/"/>
+    
+    
+      <category term="heroku" scheme="http://yoursite.com/tags/heroku/"/>
     
   </entry>
   

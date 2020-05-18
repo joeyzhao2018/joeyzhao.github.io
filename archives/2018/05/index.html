@@ -23,27 +23,27 @@
   <meta name="description" content="Most posts are my own notes. Look for &#39;reader-friendly&#39; tag for formatted notes.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Web log for my humble thoughts">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/archives/2018/05/index.html">
 <meta property="og:site_name" content="Web log for my humble thoughts">
 <meta property="og:description" content="Most posts are my own notes. Look for &#39;reader-friendly&#39; tag for formatted notes.">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Joey Zhao">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="http://yoursite.com/archives/2018/05/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
+    isHome : false,
     isPost : false,
     lang   : 'en'
   };
 </script>
 
-  <title>Web log for my humble thoughts</title>
+  <title>Archive | Web log for my humble thoughts</title>
   
 
 
@@ -184,95 +184,49 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content archive">
             
-      
+
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/01/heroku-free-tier-deployment/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Joey Zhao">
-      <meta itemprop="description" content="Most posts are my own notes. Look for 'reader-friendly' tag for formatted notes.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Web log for my humble thoughts">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/05/01/heroku-free-tier-deployment/" class="post-title-link" itemprop="url">Heroku Free Tier Deployment</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2018-05-01 02:31:29" itemprop="dateCreated datePublished" datetime="2018-05-01T02:31:29-04:00">2018-05-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-05-17 21:53:19" itemprop="dateModified" datetime="2020-05-17T21:53:19-04:00">2020-05-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/cloud/" itemprop="url" rel="index"><span itemprop="name">cloud</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+  
+  <div class="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        <span class="collection-header">Um..! 1 post. Keep on posting.</span>
+      </div>
 
       
-          <p>see logs:<br>heroku logs –tail<br>ctrl c to quit</p>
-<p><strong>heroku create</strong></p>
-<p>need pipenv<br>pipenv –three<br>pipenv install (inside the app directory)<br>pipenv shell</p>
-<p>Deploy:<br>git add .<br>git commit -m “Demo”<br>git push heroku master<br>heroku open</p>
-<p>heroku domains:add <a href="http://www.yourwebsite.com" target="_blank" rel="noopener">www.yourwebsite.com</a></p>
-<p>if changed name<br><a href="https://stackoverflow.com/questions/7615807/renamed-heroku-app-from-website-now-its-not-found" target="_blank" rel="noopener">https://stackoverflow.com/questions/7615807/renamed-heroku-app-from-website-now-its-not-found</a><br>git remote rm heroku<br>git remote add heroku <a href="mailto:git@heroku.com">git@heroku.com</a>:yourappname.git<br>and…<br>1). open a terminal<br>2). Go to your_app_directory/.git/config<br>3). Once you open the config file then edit as follows:<br>Change<br>url = <a href="mailto:git@heroku.com">git@heroku.com</a>:old_app_name.git<br>to<br>url = <a href="mailto:git@heroku.com">git@heroku.com</a>:new_app_name.git</p>
-<p>in the manage.py<br>change app.settings</p>
-<p>Now, database<br>heroku addons </p>
-<p>heroku config (to see the database_url)<br>DATABASE_URL:         postgres://mememe:<a href="mailto:nonono@something.amazonaws.com">nonono@something.amazonaws.com</a>:5432/dbdbdb</p>
-<p>then change in the django settings</p>
-<p> DATABASES = {<br>    ‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.postgresql_psycopg2’,<br>        ‘NAME’: ‘dbdbdb’,<br>        ‘USER’: ‘mememe’,<br>        ‘PASSWORD’: ‘nonono’,<br>        ‘HOST’: ‘something.amazonaws.com’,<br>        ‘PORT’: ‘6543’,<br>    }<br>    # ‘default’: {<br>    #     ‘ENGINE’: ‘django.db.backends.sqlite3’,<br>    #     ‘NAME’: os.path.join(BASE_DIR, ‘db.sqlite3’),<br>    # }<br>}</p>
-<p>then do ‘python manage.py migrate’<br>this create the tables</p>
-<p>export PATH=/Applications/Postgres.app/Contents/Versions/10/bin/:$PATH<br>THEN<br>heroku pg:psql</p>
-<p><a href="https://gist.github.com/sirodoht/f598d14e9644e2d3909629a41e3522ad" target="_blank" rel="noopener">https://gist.github.com/sirodoht/f598d14e9644e2d3909629a41e3522ad</a></p>
-
-      
+    <div class="collection-year">
+      <span class="collection-header">2018</span>
     </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2018-05-01T02:31:29-04:00"
+              content="2018-05-01">
+          05-01
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2018/05/01/heroku-free-tier-deployment/" itemprop="url">
+            <span itemprop="name">Heroku Free Tier Deployment</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+
+
+    </div>
+  </div>
+  
+  
+  
 
   
 
