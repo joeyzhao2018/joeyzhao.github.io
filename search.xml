@@ -1,29 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Heroku Free Tier Deployment</title>
-    <url>/2018/05/01/heroku-free-tier-deployment/</url>
-    <content><![CDATA[<p>see logs:<br>heroku logs –tail<br>ctrl c to quit</p>
-<p><strong>heroku create</strong></p>
-<p>need pipenv<br>pipenv –three<br>pipenv install (inside the app directory)<br>pipenv shell</p>
-<p>Deploy:<br>git add .<br>git commit -m “Demo”<br>git push heroku master<br>heroku open</p>
-<p>heroku domains:add <a href="http://www.yourwebsite.com" target="_blank" rel="noopener">www.yourwebsite.com</a></p>
-<p>if changed name<br><a href="https://stackoverflow.com/questions/7615807/renamed-heroku-app-from-website-now-its-not-found" target="_blank" rel="noopener">https://stackoverflow.com/questions/7615807/renamed-heroku-app-from-website-now-its-not-found</a><br>git remote rm heroku<br>git remote add heroku <a href="mailto:git@heroku.com">git@heroku.com</a>:yourappname.git<br>and…<br>1). open a terminal<br>2). Go to your_app_directory/.git/config<br>3). Once you open the config file then edit as follows:<br>Change<br>url = <a href="mailto:git@heroku.com">git@heroku.com</a>:old_app_name.git<br>to<br>url = <a href="mailto:git@heroku.com">git@heroku.com</a>:new_app_name.git</p>
-<p>in the manage.py<br>change app.settings</p>
-<p>Now, database<br>heroku addons </p>
-<p>heroku config (to see the database_url)<br>DATABASE_URL:         postgres://mememe:<a href="mailto:nonono@something.amazonaws.com">nonono@something.amazonaws.com</a>:5432/dbdbdb</p>
-<p>then change in the django settings</p>
-<p> DATABASES = {<br>    ‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.postgresql_psycopg2’,<br>        ‘NAME’: ‘dbdbdb’,<br>        ‘USER’: ‘mememe’,<br>        ‘PASSWORD’: ‘nonono’,<br>        ‘HOST’: ‘something.amazonaws.com’,<br>        ‘PORT’: ‘6543’,<br>    }<br>    # ‘default’: {<br>    #     ‘ENGINE’: ‘django.db.backends.sqlite3’,<br>    #     ‘NAME’: os.path.join(BASE_DIR, ‘db.sqlite3’),<br>    # }<br>}</p>
-<p>then do ‘python manage.py migrate’<br>this create the tables</p>
-<p>export PATH=/Applications/Postgres.app/Contents/Versions/10/bin/:$PATH<br>THEN<br>heroku pg:psql</p>
-<p><a href="https://gist.github.com/sirodoht/f598d14e9644e2d3909629a41e3522ad" target="_blank" rel="noopener">https://gist.github.com/sirodoht/f598d14e9644e2d3909629a41e3522ad</a></p>
+    <title>game-stick-convert</title>
+    <url>/2020/06/16/game-stick-convert/</url>
+    <content><![CDATA[<h1 id="Convert-game-stick-inputs-to-d-pad-inputs"><a href="#Convert-game-stick-inputs-to-d-pad-inputs" class="headerlink" title="Convert game stick inputs to d-pad inputs"></a>Convert game stick inputs to d-pad inputs</h1><p>A game stick, or a joy stick, is one type of game controller that looks like this:</p>
+<pre><code>     __
+    (  )
+     ||
+     ||
+ ___|&quot;&quot;|__.._
+/____________\
+\____________/~~~</code></pre><p>I built <a href="https://joeyzhao2018.github.io/stick-to-d-pad/" target="_blank" rel="noopener">a demo page</a> to show how to map the inputs from the stick to up, down, left , right signals.</p>
+<p>It refreshed my memory on vector math a little bit, which was fun.</p>
+<p>Basically, a cross product can be utilized to determine which side one vector lies with respect to another vector.</p>
+<p>References:<br>I pretty much learned how to draw a page like this from watching following Youtube channels.<br>Highly recommand:<br><a href="https://www.youtube.com/channel/UCdS3ojA8RL8t1r18Gj1cl6w" target="_blank" rel="noopener">Poth on Programming</a><br><a href="https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw" target="_blank" rel="noopener">Web dev simplified</a></p>
 ]]></content>
-      <categories>
-        <category>cloud</category>
-        <category>from-old-blog</category>
-      </categories>
       <tags>
-        <tag>heroku</tag>
+        <tag>game</tag>
       </tags>
   </entry>
   <entry>
@@ -63,6 +56,32 @@
       <tags>
         <tag>hexo</tag>
         <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Heroku Free Tier Deployment</title>
+    <url>/2018/05/01/heroku-free-tier-deployment/</url>
+    <content><![CDATA[<p>see logs:<br>heroku logs –tail<br>ctrl c to quit</p>
+<p><strong>heroku create</strong></p>
+<p>need pipenv<br>pipenv –three<br>pipenv install (inside the app directory)<br>pipenv shell</p>
+<p>Deploy:<br>git add .<br>git commit -m “Demo”<br>git push heroku master<br>heroku open</p>
+<p>heroku domains:add <a href="http://www.yourwebsite.com" target="_blank" rel="noopener">www.yourwebsite.com</a></p>
+<p>if changed name<br><a href="https://stackoverflow.com/questions/7615807/renamed-heroku-app-from-website-now-its-not-found" target="_blank" rel="noopener">https://stackoverflow.com/questions/7615807/renamed-heroku-app-from-website-now-its-not-found</a><br>git remote rm heroku<br>git remote add heroku <a href="mailto:git@heroku.com">git@heroku.com</a>:yourappname.git<br>and…<br>1). open a terminal<br>2). Go to your_app_directory/.git/config<br>3). Once you open the config file then edit as follows:<br>Change<br>url = <a href="mailto:git@heroku.com">git@heroku.com</a>:old_app_name.git<br>to<br>url = <a href="mailto:git@heroku.com">git@heroku.com</a>:new_app_name.git</p>
+<p>in the manage.py<br>change app.settings</p>
+<p>Now, database<br>heroku addons </p>
+<p>heroku config (to see the database_url)<br>DATABASE_URL:         postgres://mememe:<a href="mailto:nonono@something.amazonaws.com">nonono@something.amazonaws.com</a>:5432/dbdbdb</p>
+<p>then change in the django settings</p>
+<p> DATABASES = {<br>    ‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.postgresql_psycopg2’,<br>        ‘NAME’: ‘dbdbdb’,<br>        ‘USER’: ‘mememe’,<br>        ‘PASSWORD’: ‘nonono’,<br>        ‘HOST’: ‘something.amazonaws.com’,<br>        ‘PORT’: ‘6543’,<br>    }<br>    # ‘default’: {<br>    #     ‘ENGINE’: ‘django.db.backends.sqlite3’,<br>    #     ‘NAME’: os.path.join(BASE_DIR, ‘db.sqlite3’),<br>    # }<br>}</p>
+<p>then do ‘python manage.py migrate’<br>this create the tables</p>
+<p>export PATH=/Applications/Postgres.app/Contents/Versions/10/bin/:$PATH<br>THEN<br>heroku pg:psql</p>
+<p><a href="https://gist.github.com/sirodoht/f598d14e9644e2d3909629a41e3522ad" target="_blank" rel="noopener">https://gist.github.com/sirodoht/f598d14e9644e2d3909629a41e3522ad</a></p>
+]]></content>
+      <categories>
+        <category>cloud</category>
+        <category>from-old-blog</category>
+      </categories>
+      <tags>
+        <tag>heroku</tag>
       </tags>
   </entry>
   <entry>

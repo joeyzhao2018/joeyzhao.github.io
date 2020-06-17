@@ -20,17 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":5,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Most posts are my own notes. Look for &#39;reader-friendly&#39; tag for formatted notes.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Web log for my humble thoughts">
-<meta property="og:url" content="http://yoursite.com/tags/parallelism/index.html">
+  <meta name="description" content="Convert game stick inputs to d-pad inputsA game stick, or a joy stick, is one type of game controller that looks like this:      __     (  )      ||      ||  ___|&quot;&quot;|__.._ &#x2F;____________\ \___">
+<meta property="og:type" content="article">
+<meta property="og:title" content="game-stick-convert">
+<meta property="og:url" content="http://yoursite.com/2020/06/16/game-stick-convert/index.html">
 <meta property="og:site_name" content="Web log for my humble thoughts">
-<meta property="og:description" content="Most posts are my own notes. Look for &#39;reader-friendly&#39; tag for formatted notes.">
+<meta property="og:description" content="Convert game stick inputs to d-pad inputsA game stick, or a joy stick, is one type of game controller that looks like this:      __     (  )      ||      ||  ___|&quot;&quot;|__.._ &#x2F;____________\ \___">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-06-17T02:41:31.000Z">
+<meta property="article:modified_time" content="2020-06-17T02:59:02.992Z">
 <meta property="article:author" content="Joey Zhao">
+<meta property="article:tag" content="game">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/tags/parallelism/">
+<link rel="canonical" href="http://yoursite.com/2020/06/16/game-stick-convert/">
 
 
 <script id="page-configurations">
@@ -38,12 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Tag: parallelism | Web log for my humble thoughts</title>
+  <title>game-stick-convert | Web log for my humble thoughts</title>
   
 
 
@@ -184,57 +187,97 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">parallelism
-          <small>Tag</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/16/game-stick-convert/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Joey Zhao">
+      <meta itemprop="description" content="Most posts are my own notes. Look for 'reader-friendly' tag for formatted notes.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Web log for my humble thoughts">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          game-stick-convert
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-06-16 22:41:31 / Modified: 22:59:02" itemprop="dateCreated datePublished" datetime="2020-06-16T22:41:31-04:00">2020-06-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2018</span>
+        <h1 id="Convert-game-stick-inputs-to-d-pad-inputs"><a href="#Convert-game-stick-inputs-to-d-pad-inputs" class="headerlink" title="Convert game stick inputs to d-pad inputs"></a>Convert game stick inputs to d-pad inputs</h1><p>A game stick, or a joy stick, is one type of game controller that looks like this:</p>
+<pre><code>     __
+    (  )
+     ||
+     ||
+ ___|&quot;&quot;|__.._
+/____________\
+\____________/~~~</code></pre><p>I built <a href="https://joeyzhao2018.github.io/stick-to-d-pad/" target="_blank" rel="noopener">a demo page</a> to show how to map the inputs from the stick to up, down, left , right signals.</p>
+<p>It refreshed my memory on vector math a little bit, which was fun.</p>
+<p>Basically, a cross product can be utilized to determine which side one vector lies with respect to another vector.</p>
+<p>References:<br>I pretty much learned how to draw a page like this from watching following Youtube channels.<br>Highly recommand:<br><a href="https://www.youtube.com/channel/UCdS3ojA8RL8t1r18Gj1cl6w" target="_blank" rel="noopener">Poth on Programming</a><br><a href="https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw" target="_blank" rel="noopener">Web dev simplified</a></p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-05-08T15:56:24-04:00"
-              content="2018-05-08">
-          05-08
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/game/" rel="tag"># game</a>
+          </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2018/05/08/wicked-processes/" itemprop="url">
-            <span itemprop="name">wicked-processes</span>
-          </a>
-      </div>
+        
 
-    </header>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/05/17/migration/" rel="prev" title="migration">
+      <i class="fa fa-chevron-left"></i> migration
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -281,6 +324,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Convert-game-stick-inputs-to-d-pad-inputs"><span class="nav-number">1.</span> <span class="nav-text">Convert game stick inputs to d-pad inputs</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -401,6 +445,25 @@
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'ef79467effa10d19d8a5',
+      clientSecret: 'cdf3ff8d289678bd721d9b915953edf87df23c4d',
+      repo        : 'joeyzhao2018.github.io',
+      owner       : 'joeyzhao2018',
+      admin       : ['joeyzhao2018'],
+      id          : 'c57c6eb8982bd1be833d1060d416bc79',
+        language: 'en',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>

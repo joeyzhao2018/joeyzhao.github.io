@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-18T02:25:19.572Z</updated>
+  <updated>2020-06-17T02:59:02.992Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>game-stick-convert</title>
+    <link href="http://yoursite.com/2020/06/16/game-stick-convert/"/>
+    <id>http://yoursite.com/2020/06/16/game-stick-convert/</id>
+    <published>2020-06-17T02:41:31.000Z</published>
+    <updated>2020-06-17T02:59:02.992Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Convert-game-stick-inputs-to-d-pad-inputs"><a href="#Convert-game-stick-inputs-to-d-pad-inputs" class="headerlink" title="Convert game stick inputs to d-pad inputs"></a>Convert game stick inputs to d-pad inputs</h1><p>A game stick, or a joy stick, is one type of game controller that looks like this:</p><pre><code>     __    (  )     ||     || ___|&quot;&quot;|__.._/____________\\____________/~~~</code></pre><p>I built <a href="https://joeyzhao2018.github.io/stick-to-d-pad/" target="_blank" rel="noopener">a demo page</a> to show how to map the inputs from the stick to up, down, left , right signals.</p><p>It refreshed my memory on vector math a little bit, which was fun.</p><p>Basically, a cross product can be utilized to determine which side one vector lies with respect to another vector.</p><p>References:<br>I pretty much learned how to draw a page like this from watching following Youtube channels.<br>Highly recommand:<br><a href="https://www.youtube.com/channel/UCdS3ojA8RL8t1r18Gj1cl6w" target="_blank" rel="noopener">Poth on Programming</a><br><a href="https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw" target="_blank" rel="noopener">Web dev simplified</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Convert-game-stick-inputs-to-d-pad-inputs&quot;&gt;&lt;a href=&quot;#Convert-game-stick-inputs-to-d-pad-inputs&quot; class=&quot;headerlink&quot; title=&quot;Convert ga
+      
+    
+    </summary>
+    
+    
+    
+      <category term="game" scheme="http://yoursite.com/tags/game/"/>
+    
+  </entry>
   
   <entry>
     <title>migration</title>
