@@ -20,45 +20,6 @@
       </tags>
   </entry>
   <entry>
-    <title>migration</title>
-    <url>/2020/05/17/migration/</url>
-    <content><![CDATA[<p>I’m migrating my posts from my old site hosted in heroku.<br>Hexo is really a cool tool. And I can host everything statically in github. I knew this was doable but never got a chance to do it. Finally started migrating over this weekend (still working on it).<br>But it is actually pretty simple and I highly recommend using hexo for personal blogs.<br>Some tips setting it up. </p>
-<p>More stuff coming.</p>
-<h3 id="Github"><a href="#Github" class="headerlink" title="Github."></a>Github.</h3><p>Create a github repo and name it <username>.github.io.  Username has to be your github username.<br>Also you want to setup SSH in github.</p>
-<h3 id="NodeJS"><a href="#NodeJS" class="headerlink" title="NodeJS."></a>NodeJS.</h3><p>install Nodejs so that you can use npm</p>
-<h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo."></a>Hexo.</h3><p>install command</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>create project</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init &#123;project name&#125;</span><br></pre></td></tr></table></figure>
-<p>compile your files into HTML:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-<p>try see it locally:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo serve</span><br></pre></td></tr></table></figure>
-<p>deploy to github</p>
-<p>first need to update the <strong>_config.yml</strong></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&#123;git</span> <span class="string">repo</span> <span class="string">ssh</span> <span class="string">address&#125;</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-<p>then git plugin for hexo </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>now finally</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>github</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Heroku Free Tier Deployment</title>
     <url>/2018/05/01/heroku-free-tier-deployment/</url>
     <content><![CDATA[<p>see logs:<br>heroku logs –tail<br>ctrl c to quit</p>
@@ -105,6 +66,45 @@
 <ul>
 <li>For RSS, you need a plug-in named <code>hexo-generator-feed</code><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure></li>
 </ul>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>migration</title>
+    <url>/2020/05/17/migration/</url>
+    <content><![CDATA[<p>I’m migrating my posts from my old site hosted in heroku.<br>Hexo is really a cool tool. And I can host everything statically in github. I knew this was doable but never got a chance to do it. Finally started migrating over this weekend (still working on it).<br>But it is actually pretty simple and I highly recommend using hexo for personal blogs.<br>Some tips setting it up. </p>
+<p>More stuff coming.</p>
+<h3 id="Github"><a href="#Github" class="headerlink" title="Github."></a>Github.</h3><p>Create a github repo and name it <username>.github.io.  Username has to be your github username.<br>Also you want to setup SSH in github.</p>
+<h3 id="NodeJS"><a href="#NodeJS" class="headerlink" title="NodeJS."></a>NodeJS.</h3><p>install Nodejs so that you can use npm</p>
+<h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo."></a>Hexo.</h3><p>install command</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>create project</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init &#123;project name&#125;</span><br></pre></td></tr></table></figure>
+<p>compile your files into HTML:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<p>try see it locally:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo serve</span><br></pre></td></tr></table></figure>
+<p>deploy to github</p>
+<p>first need to update the <strong>_config.yml</strong></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&#123;git</span> <span class="string">repo</span> <span class="string">ssh</span> <span class="string">address&#125;</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<p>then git plugin for hexo </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>now finally</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
 ]]></content>
       <categories>
         <category>blog</category>
