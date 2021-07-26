@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>game-stick-convert</title>
-    <url>/2020/06/16/game-stick-convert/</url>
-    <content><![CDATA[<h1 id="Convert-game-stick-inputs-to-d-pad-inputs"><a href="#Convert-game-stick-inputs-to-d-pad-inputs" class="headerlink" title="Convert game stick inputs to d-pad inputs"></a>Convert game stick inputs to d-pad inputs</h1><p>A game stick, or a joy stick, is one type of game controller that looks like this:</p>
-<pre><code>     __
-    (  )
-     ||
-     ||
- ___|&quot;&quot;|__.._
-/____________\
-\____________/~~~</code></pre><p>I built <a href="https://joeyzhao2018.github.io/stick-to-d-pad/" target="_blank" rel="noopener">a demo page</a> to show how to map the inputs from the stick to up, down, left , right signals.</p>
-<p>It refreshed my memory on vector math a little bit, which was fun.</p>
-<p>Basically, a cross product can be utilized to determine which side one vector lies with respect to another vector.</p>
-<p>References:<br>I pretty much learned how to draw a page like this from watching following Youtube channels.<br>Highly recommand:<br><a href="https://www.youtube.com/channel/UCdS3ojA8RL8t1r18Gj1cl6w" target="_blank" rel="noopener">Poth on Programming</a><br><a href="https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw" target="_blank" rel="noopener">Web dev simplified</a></p>
-]]></content>
-      <tags>
-        <tag>game</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Heroku Free Tier Deployment</title>
     <url>/2018/05/01/heroku-free-tier-deployment/</url>
     <content><![CDATA[<p>see logs:<br>heroku logs –tail<br>ctrl c to quit</p>
@@ -46,33 +27,22 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo refresher</title>
-    <url>/2021/07/26/hexo-refresher/</url>
-    <content><![CDATA[<h2 id="How-to-make-a-new-post"><a href="#How-to-make-a-new-post" class="headerlink" title="How to make a new post?"></a>How to make a new post?</h2><ul>
-<li><p>First step</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;a new title&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Then locate the newly created file and edit it</p>
-</li>
-<li><p>Then try to see how it looks locally</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>After editing it, publish it by</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate # this generate static files</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ul>
-<ul>
-<li>For RSS, you need a plug-in named <code>hexo-generator-feed</code><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure></li>
-</ul>
+    <title>game-stick-convert</title>
+    <url>/2020/06/16/game-stick-convert/</url>
+    <content><![CDATA[<h1 id="Convert-game-stick-inputs-to-d-pad-inputs"><a href="#Convert-game-stick-inputs-to-d-pad-inputs" class="headerlink" title="Convert game stick inputs to d-pad inputs"></a>Convert game stick inputs to d-pad inputs</h1><p>A game stick, or a joy stick, is one type of game controller that looks like this:</p>
+<pre><code>     __
+    (  )
+     ||
+     ||
+ ___|&quot;&quot;|__.._
+/____________\
+\____________/~~~</code></pre><p>I built <a href="https://joeyzhao2018.github.io/stick-to-d-pad/" target="_blank" rel="noopener">a demo page</a> to show how to map the inputs from the stick to up, down, left , right signals.</p>
+<p>It refreshed my memory on vector math a little bit, which was fun.</p>
+<p>Basically, a cross product can be utilized to determine which side one vector lies with respect to another vector.</p>
+<p>References:<br>I pretty much learned how to draw a page like this from watching following Youtube channels.<br>Highly recommand:<br><a href="https://www.youtube.com/channel/UCdS3ojA8RL8t1r18Gj1cl6w" target="_blank" rel="noopener">Poth on Programming</a><br><a href="https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw" target="_blank" rel="noopener">Web dev simplified</a></p>
 ]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
       <tags>
-        <tag>hexo</tag>
-        <tag>github</tag>
+        <tag>game</tag>
       </tags>
   </entry>
   <entry>
@@ -240,6 +210,35 @@ None
         <tag>parallelism</tag>
         <tag>python</tag>
         <tag>concurrency</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo refresher</title>
+    <url>/2021/07/26/hexo-refresher/</url>
+    <content><![CDATA[<h2 id="How-to-make-a-new-post"><a href="#How-to-make-a-new-post" class="headerlink" title="How to make a new post?"></a>How to make a new post?</h2><ul>
+<li><p>First step</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;a new title&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Then locate the newly created file and edit it</p>
+</li>
+<li><p>Then try to see how it looks locally</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>After editing it, publish it by</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate # this generate static files</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>Give it a few minutes to show up. Be patient…</p>
+</li>
+</ul>
+<ul>
+<li>For RSS, you need a plug-in named <code>hexo-generator-feed</code><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
       </tags>
   </entry>
 </search>

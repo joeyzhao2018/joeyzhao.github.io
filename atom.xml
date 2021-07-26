@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-07-26T22:42:45.112Z</updated>
+  <updated>2021-07-26T23:21:47.175Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2021/07/26/hexo-refresher/"/>
     <id>http://yoursite.com/2021/07/26/hexo-refresher/</id>
     <published>2021-07-26T22:31:44.000Z</published>
-    <updated>2021-07-26T22:42:45.112Z</updated>
+    <updated>2021-07-26T23:21:47.175Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="How-to-make-a-new-post"><a href="#How-to-make-a-new-post" class="headerlink" title="How to make a new post?"></a>How to make a new post?</h2><ul><li><p>First step</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;a new title&quot;</span><br></pre></td></tr></table></figure></li><li><p>Then locate the newly created file and edit it</p></li><li><p>Then try to see how it looks locally</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></li><li><p>After editing it, publish it by</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate # this generate static files</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></li></ul><ul><li>For RSS, you need a plug-in named <code>hexo-generator-feed</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="How-to-make-a-new-post"><a href="#How-to-make-a-new-post" class="headerlink" title="How to make a new post?"></a>How to make a new post?</h2><ul><li><p>First step</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;a new title&quot;</span><br></pre></td></tr></table></figure></li><li><p>Then locate the newly created file and edit it</p></li><li><p>Then try to see how it looks locally</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></li><li><p>After editing it, publish it by</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate # this generate static files</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure><p>Give it a few minutes to show up. Be patient…</p></li></ul><ul><li>For RSS, you need a plug-in named <code>hexo-generator-feed</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure></li></ul>]]></content>
     
     <summary type="html">
     
