@@ -20,22 +20,21 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":5,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Example 1   from multiprocessing import Manager, Process  def timeout_query_by_func_name(params,settings,function_name):    m&#x3D;Manager()    ns&#x3D;m.Namespace()    ns.my_df&#x3D;None    p&#x3D; Process(target&#x3D;funct">
+  <meta name="description" content="How to make a new post? First step 1hexo new &quot;a new title&quot;  Then locate the newly created file and edit it  Then try to see how it looks locally 1hexo server  After editing it, publish it by">
 <meta property="og:type" content="article">
-<meta property="og:title" content="wicked-processes">
-<meta property="og:url" content="http://yoursite.com/2018/05/08/wicked-processes/index.html">
+<meta property="og:title" content="hexo refresher">
+<meta property="og:url" content="http://yoursite.com/2021/07/26/hexo-refresher/index.html">
 <meta property="og:site_name" content="Web log for my humble thoughts">
-<meta property="og:description" content="Example 1   from multiprocessing import Manager, Process  def timeout_query_by_func_name(params,settings,function_name):    m&#x3D;Manager()    ns&#x3D;m.Namespace()    ns.my_df&#x3D;None    p&#x3D; Process(target&#x3D;funct">
+<meta property="og:description" content="How to make a new post? First step 1hexo new &quot;a new title&quot;  Then locate the newly created file and edit it  Then try to see how it looks locally 1hexo server  After editing it, publish it by">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2018-05-08T19:56:24.000Z">
-<meta property="article:modified_time" content="2020-05-18T02:17:40.301Z">
+<meta property="article:published_time" content="2021-07-26T22:31:44.000Z">
+<meta property="article:modified_time" content="2021-07-26T22:42:45.112Z">
 <meta property="article:author" content="Joey Zhao">
-<meta property="article:tag" content="parallelism">
-<meta property="article:tag" content="python">
-<meta property="article:tag" content="concurrency">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="github">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2018/05/08/wicked-processes/">
+<link rel="canonical" href="http://yoursite.com/2021/07/26/hexo-refresher/">
 
 
 <script id="page-configurations">
@@ -48,7 +47,7 @@
   };
 </script>
 
-  <title>wicked-processes | Web log for my humble thoughts</title>
+  <title>hexo refresher | Web log for my humble thoughts</title>
   
 
 
@@ -196,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/08/wicked-processes/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/07/26/hexo-refresher/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -209,7 +208,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          wicked-processes
+          hexo refresher
         </h1>
 
         <div class="post-meta">
@@ -218,23 +217,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2018-05-08 15:56:24" itemprop="dateCreated datePublished" datetime="2018-05-08T15:56:24-04:00">2018-05-08</time>
+              <time title="Created: 2021-07-26 18:31:44 / Modified: 18:42:45" itemprop="dateCreated datePublished" datetime="2021-07-26T18:31:44-04:00">2021-07-26</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-05-17 22:17:40" itemprop="dateModified" datetime="2020-05-17T22:17:40-04:00">2020-05-17</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/from-old-blog/" itemprop="url" rel="index"><span itemprop="name">from-old-blog</span></a>
+                  <a href="/categories/blog/" itemprop="url" rel="index"><span itemprop="name">blog</span></a>
                 </span>
             </span>
 
@@ -249,121 +242,24 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h5>
-Example 1
-</h5>
-<pre><code>
-from multiprocessing import Manager, Process
-
-<p>def timeout_query_by_func_name(params,settings,function_name):<br>    m=Manager()<br>    ns=m.Namespace()<br>    ns.my_df=None<br>    p= Process(target=function_name, args=(params,settings,ns))<br>    p.start()<br>    if ‘timeout’ in settings.keys():<br>        timeout=int(settings[‘timeout’])<br>    else:<br>        timeout=600<br>    p.join(timeout)<br>    if p.is_alive():<br>        p.terminate()<br>        p.join()<br>        raise Exception(‘Time out when calling ‘+function_name.<strong>name</strong>)<br>    return ns.my_df<br>    </code></pre></p>
-<h5>Example 2</h5>
-<pre>
-<code>
-def workon_finishing():
-    ps=[]
-    for product, run_id in product_runs.iteritems():
-        p=Process(target=run_id_status_monitor, args=(product, run_id))
-        p.start()
-        ps.append(p)
-
-<pre><code>print(&quot;Start monitoring..... this can take up to a few hours&quot;)
-for p in ps:
-    p.join()
-print(&quot;Stopped monitoring. This run is closed.&quot;)</code></pre></code>
-</pre>
-
-<h5>Mind the COMMA</h5>
-<p>If you see something like...</p>
-<pre><code>TypeError: 'somekindof' object is not iterable
-</code></pre>
-<p> just change the <code>args=(something)</code> to <code>args=(something,)</code>
-</p>
-<h5>
-About 'shared' objects, below trials are actually not recommended, especially for Process. 
-It adds quite a lot overhead.
-Thread are fine with that <strong>dfs</strong>. 
-Idk why but using list references are very addictive in Python. 
-</h5>
-<pre><code>
-from multiprocessing import Process, Manager
-import pandas as pd
-import threading
-
-<p>def f1(name_space):<br>    name_space.df=pd.DataFrame({‘a’:[1,2],’b’:[3,4]})</p>
-<p>def f2(name_space):<br>    name_space.df=pd.DataFrame({‘a’:[1,4],’b’:[2,3]})</p>
-<p>def f3(items,i):<br>    items[i]=pd.DataFrame({‘c’:[2,5]})</p>
-<p>if <strong>name</strong>==”<strong>main</strong>“:<br>    m=Manager()<br>    ns=m.Namespace()<br>    ns_1=m.Namespace()<br>    ns_2=m.Namespace()<br>    ns_3=m.Namespace()</p>
-<pre><code>ns_1.df=None
-ns_2.df=None
-ns_3.df=None
-
-ps=[]
-p1= Process(target=f1, args=(ns_1,))
-p1.start()
-p2= Process(target=f2, args=(ns_2,))
-p2.start()
-p3= Process(target=f1, args=(ns_3,))
-p3.start()
-p4= Process(target=f2, args=(ns_3,))
-p4.start()
-dfs=[None]*9
-p3 = Process(target=f3, args=(dfs,1,))
-p3.start()
-t1=threading.Thread(target=f3, args=(dfs,2,))
-t1.start()
-ts=[]
-for i in [4,6,7]:
-    t=threading.Thread(target=f3,args=(dfs,i,))
-    t.start()
-    ts.append(t)
-p1.join()
-p2.join()
-p3.join()
-p4.join()
-t1.join()
-for t in ts:
-    t.join()
-print(ns_1.df)
-print(ns_2.df)
-print(ns_3.df)
-print(dfs[1])
-print(dfs[2])
-print(dfs[4])
-print(dfs[6])
-print(dfs[7])
-&lt;/code&gt;&lt;/pre&gt;</code></pre><h5>
-the outputs are
-
-</h5>
-<pre><code> 
-   a  b
-0  1  3
-1  2  4
-   a  b
-0  1  2
-1  4  3
-   a  b
-0  1  2
-1  4  3
-None
-   c
-0  2
-1  5
-   c
-0  2
-1  5
-   c
-0  2
-1  5
-   c
-0  2
-1  5
-</code></pre>
-<h5>But, since join(timeout) only works for Process and with the nice terminate() function, please use Manager in case you need TIMEOUT. That's the whole point.</h5>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> multiprocessing.managers <span class="keyword">import</span> Man <span class="function"><span class="keyword">def</span> <span class="title">timeout_query_by_func_name</span><span class="params">(params,settings,function_name)</span>:</span> m=Manager() ns=m.Namespace() ns.my_df=<span class="literal">None</span> p= Process(target=function_name, args=(params,settings,ns)) p.start() <span class="keyword">if</span> <span class="string">'timeout'</span> <span class="keyword">in</span> settings.keys(): timeout=int(settings[<span class="string">'timeout'</span>]) <span class="keyword">else</span>: timeout=<span class="number">600</span> p.join(timeout) <span class="keyword">if</span> p.is_alive(): p.terminate() p.join() <span class="keyword">raise</span> Exception(<span class="string">'Time out when calling '</span>+function_name.__name__) <span class="keyword">return</span> ns.my_df</span><br></pre></td></tr></table></figure>
+        <h2 id="How-to-make-a-new-post"><a href="#How-to-make-a-new-post" class="headerlink" title="How to make a new post?"></a>How to make a new post?</h2><ul>
+<li><p>First step</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;a new title&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Then locate the newly created file and edit it</p>
+</li>
+<li><p>Then try to see how it looks locally</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>After editing it, publish it by</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate # this generate static files</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 
 
+</li>
+</ul>
+<ul>
+<li>For RSS, you need a plug-in named <code>hexo-generator-feed</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure></li>
+</ul>
 
     </div>
 
@@ -373,9 +269,8 @@ None
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/parallelism/" rel="tag"># parallelism</a>
-              <a href="/tags/python/" rel="tag"># python</a>
-              <a href="/tags/concurrency/" rel="tag"># concurrency</a>
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
+              <a href="/tags/github/" rel="tag"># github</a>
           </div>
 
         
@@ -384,13 +279,10 @@ None
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2018/05/01/heroku-free-tier-deployment/" rel="prev" title="Heroku Free Tier Deployment">
-      <i class="fa fa-chevron-left"></i> Heroku Free Tier Deployment
+    <a href="/2020/06/16/game-stick-convert/" rel="prev" title="game-stick-convert">
+      <i class="fa fa-chevron-left"></i> game-stick-convert
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/05/17/migration/" rel="next" title="migration">
-      migration <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -450,17 +342,7 @@ None
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text">
-Example 1
-</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#"><span class="nav-number">2.</span> <span class="nav-text">Example 2</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#"><span class="nav-number">3.</span> <span class="nav-text">Mind the COMMA</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#"><span class="nav-number">4.</span> <span class="nav-text">
-About &#39;shared&#39; objects, below trials are actually not recommended, especially for Process. 
-It adds quite a lot overhead.
-Thread are fine with that dfs. 
-Idk why but using list references are very addictive in Python. 
-</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#"><span class="nav-number">5.</span> <span class="nav-text">
-the outputs are
-
-</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#"><span class="nav-number">6.</span> <span class="nav-text">But, since join(timeout) only works for Process and with the nice terminate() function, please use Manager in case you need TIMEOUT. That&#39;s the whole point.</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-make-a-new-post"><span class="nav-number">1.</span> <span class="nav-text">How to make a new post?</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -592,7 +474,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'joeyzhao2018.github.io',
       owner       : 'joeyzhao2018',
       admin       : ['joeyzhao2018'],
-      id          : 'afa0baf99ef8de208e50e39174c78588',
+      id          : '907f67a9feeda3021d0c32202d422938',
         language: 'en',
       distractionFreeMode: true
     });
